@@ -43,3 +43,33 @@ run_c2:
 	rm test_sample_results_calculated.txt
 	rm solution_c_2
 
+run_cpp1:
+	clang++ -std=c++23 -O3 -march=native -flto \
+		-DNDEBUG -fvisibility=hidden \
+		-o solution_cpp1 solution_cpp_1.cpp
+	strip -x solution_cpp1
+	time ./solution_cpp1
+	python evaluate_test.py 
+	rm test_sample_results_calculated.txt
+	rm solution_cpp1
+
+run_cpp2:
+	clang++ -std=c++23 -O3 -march=native -flto \
+		-DNDEBUG -fvisibility=hidden \
+		-o solution_cpp_2 solution_cpp_2.cpp
+	strip -x solution_cpp_2
+	time ./solution_cpp_2
+	python evaluate_test.py 
+	rm test_sample_results_calculated.txt
+	rm solution_cpp_2
+
+run_cpp3:
+	clang++ -std=c++23 -O3 -march=native -flto \
+		-DNDEBUG -fvisibility=hidden \
+		-o solution_cpp_3 solution_cpp_3.cpp
+	strip -x solution_cpp_3
+	time ./solution_cpp_3
+	python evaluate_test.py 
+	rm test_sample_results_calculated.txt
+	rm solution_cpp_3
+
