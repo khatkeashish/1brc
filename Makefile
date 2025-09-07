@@ -29,3 +29,17 @@ run_rust2:
 	rm test_sample_results_calculated.txt
 	rm solution_rs_2
 
+run_c1:
+	clang -std=c23 -O3 -ffast-math -march=native -flto -DNDEBUG -fvisibility=hidden -o solution_c_1 solution_c_1.c
+	time ./solution_c_1
+	python evaluate_test.py 
+	rm test_sample_results_calculated.txt
+	rm solution_c_1
+
+run_c2:
+	clang -std=c23 -O3 -ffast-math -march=native -flto -DNDEBUG -fvisibility=hidden -o solution_c_2 solution_c_2.c
+	time ./solution_c_2
+	python evaluate_test.py 
+	rm test_sample_results_calculated.txt
+	rm solution_c_2
+
