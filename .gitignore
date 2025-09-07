@@ -9,5 +9,5 @@ wheels/
 # Virtual environments
 .venv
 
-
+uv.lock
 **.txt
